@@ -1,39 +1,49 @@
-/* Hareketli yazı*/
-
-.marquee-container {
-    overflow: hidden;
-    width: 100%;
-    background: black;
-    margin-top: 10px;
-    overflow: hidden;
+.ayasofyaBilgiler .baslik {
+    text-align: center;
 }
 
-.marquee {
-    white-space: nowrap;
-    animation: marquee 30s linear infinite;
-    padding: 8px;
-    border-radius: 10px;
+.ayasofyaBilgiler .baslik .baslikYazisi {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 72px;
 }
 
-.marquee span {
-    color: white;
-    display: inline-block;
-    padding-right: 10px;
-    /* Adjust spacing between text repetitions */
+.ayasofyaBilgiler .bilgiler {
+    margin-left: 15px;
 }
 
-@keyframes marquee {
-    0% {
-        transform: translateX(100%);
-    }
-
-    100% {
-        transform: translateX(-100%);
-    }
+table {
+    width: 99%;
+    border-collapse: collapse;
+    background-color: #fff;
 }
 
-/* Hareketli yazı*/
+table tr,
+table td,
+table th {
+    border: 1px solid #bbb;
+    padding: 10px 20px;
+}
 
-/* ************* */
+table th {
+    background-color: #d1084b;
+    color: #fff;
+    font-weight: 600;
+}
 
-/* 1.Kart */
+/* Özgeçmiş dosyası */
+
+.ozgecmisBaslik , .ozgecmisAna{
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.ozgecmisBaslik .kendiFotom {
+    float: right;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+
+.ozgecmisBaslik .korayYazisi {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 72px;
+}

@@ -1,0 +1,25 @@
+.iletisim {
+    margin-left: 15px;
+    margin-top: 15px;
+    
+    text-align: center;
+}
+
+.iletisim label {
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.iletisim input {
+    border-radius: 5px;
+    border-color: lightblue;
+}
+
+.iletisim textarea {
+    border-color: lightblue;
+}
+
+.iletisim legend{
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}

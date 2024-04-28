@@ -23,7 +23,7 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Ana sayfa</a>
+            <a class="nav-link active" aria-current="page" href="anaMenu.html">Ana sayfa</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -45,6 +45,7 @@
     </div>
   </nav>
 
+  <!-- Hakkında -->
   <div class="deneme"
     style="font-size: 60px; text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
     <div class="card">
@@ -81,18 +82,19 @@
           aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
           aria-label="Slide 3"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
           aria-label="Slide 4"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
           aria-label="Slide 5"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"
           aria-label="Slide 6"></button>
       </div>
 
       <div class="carousel-inner">
-
         <div class="carousel-item active">
-          <img src="Gorseller/birinci.jpg" class="d-block w-100" alt="...">
+          <a href="#yonlendirme1">
+            <img src="Gorseller/birinci.jpg" class="d-block w-100" alt="...">
+          </a>
           <div class="carousel-caption d-none d-md-block">
             <h5>First slide label</h5>
             <p>Some representative placeholder content for the first slide.</p>
@@ -104,6 +106,14 @@
           <div class="carousel-caption d-none d-md-block">
             <h5>Second slide label</h5>
             <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="Gorseller/ucuncu.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
           </div>
         </div>
 
@@ -144,58 +154,31 @@
       </button>
     </div>
   </header>
-  
-  <!-- Cards 2 -->
-  <div class="card mb-3" style="max-width: 100%;">
-    <div class="row g-0">
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-            content. This content is a little bit longer.</p>
-          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <img src="Gorseller/ikinci.jpg" class="img-fluid rounded-start" alt="...">
-      </div>
-    </div>
-  </div>
 
-  <div class="card mb-3" style="max-width: 100%;">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img src="Gorseller/ikinci.jpg" class="img-fluid rounded-start" alt="...">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-            content. This content is a little bit longer.</p>
-          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-        </div>
-      </div>
-    </div>
-  </div>
+  <hr>
 
-  <div class="card mb-3" style="max-width: 100%;">
-    <div class="row g-0">
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-            content. This content is a little bit longer.</p>
-          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <img src="Gorseller/ikinci.jpg" class="img-fluid rounded-start" alt="...">
-      </div>
-    </div>
-  </div>
+  <!-- Cards Bir sağ bir sol -->
   
   <div class="card mb-3" style="max-width: 100%;">
     <div class="row g-0">
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+            content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <a name="yonlendirme1">
+          <img src="Gorseller/ikinci.jpg" class="img-fluid rounded-start" alt="...">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-3" style="max-width: 100%;">
+    <div class="row g-0">
       <div class="col-md-4">
         <img src="Gorseller/ikinci.jpg" class="img-fluid rounded-start" alt="...">
       </div>
@@ -242,15 +225,55 @@
     </div>
   </div>
 
-  <!-- Daha fazla kart -->
-  
+  <div class="card mb-3" style="max-width: 100%;">
+    <div class="row g-0">
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+            content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <img src="Gorseller/ikinci.jpg" class="img-fluid rounded-start" alt="...">
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-3" style="max-width: 100%;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="Gorseller/ikinci.jpg" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+            content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- 3*3 SATIRLAR , 1.satır -->
+
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col">
       <div class="card h-100">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="Gorseller/birinci.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi accusamus necessitatibus
+            temporibus officiis neque
+            assumenda repudiandae sit vitae aperiam quas tempore libero sint porro repellat, quis praesentium, nam
+            aliquam voluptatum impedit
+            magnam itaque veniam ad similique minima! Quod eum, incidunt maxime et, assumenda voluptas facere, velit ea
+            eveniet sequi cumque
+          </p>
         </div>
         <div class="card-footer">
           <small class="text-body-secondary">Last updated 3 mins ago</small>
@@ -259,7 +282,7 @@
     </div>
     <div class="col">
       <div class="card h-100">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="Gorseller/birinci.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
           <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
@@ -271,10 +294,11 @@
     </div>
     <div class="col">
       <div class="card h-100">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="Gorseller/birinci.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+            content. This card has even longer content than the first to show that equal height action.</p>
         </div>
         <div class="card-footer">
           <small class="text-body-secondary">Last updated 3 mins ago</small>
@@ -282,16 +306,19 @@
       </div>
     </div>
   </div>
+
+  <br>
 
   <!-- 2.satır -->
 
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col">
       <div class="card h-100">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="Gorseller/birinci.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+            content. This content is a little bit longer.</p>
         </div>
         <div class="card-footer">
           <small class="text-body-secondary">Last updated 3 mins ago</small>
@@ -300,7 +327,7 @@
     </div>
     <div class="col">
       <div class="card h-100">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="Gorseller/birinci.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
           <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
@@ -312,10 +339,11 @@
     </div>
     <div class="col">
       <div class="card h-100">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="Gorseller/birinci.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+            content. This card has even longer content than the first to show that equal height action.</p>
         </div>
         <div class="card-footer">
           <small class="text-body-secondary">Last updated 3 mins ago</small>
@@ -324,15 +352,18 @@
     </div>
   </div>
 
+  <br>
+
   <!-- 3.satır -->
-  
+
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col">
       <div class="card h-100">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="Gorseller/birinci.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+            content. This content is a little bit longer.</p>
         </div>
         <div class="card-footer">
           <small class="text-body-secondary">Last updated 3 mins ago</small>
@@ -341,7 +372,7 @@
     </div>
     <div class="col">
       <div class="card h-100">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="Gorseller/birinci.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
           <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
@@ -353,10 +384,11 @@
     </div>
     <div class="col">
       <div class="card h-100">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="Gorseller/birinci.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+            content. This card has even longer content than the first to show that equal height action.</p>
         </div>
         <div class="card-footer">
           <small class="text-body-secondary">Last updated 3 mins ago</small>
@@ -365,8 +397,54 @@
     </div>
   </div>
 
-  <!-- -->
-  
+  <hr>
+
+  <!-- Uyarılar -->
+
+  <div class="row">
+    <div class="card text-bg-primary mb-3" style="max-width: 20%;">
+      <div class="card-header">Header</div>
+      <div class="card-body">
+        <h5 class="card-title">Primary card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+    </div>
+    <div class="card text-bg-success mb-3" style="max-width: 20%;">
+      <div class="card-header">Header</div>
+      <div class="card-body">
+        <h5 class="card-title">Success card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+    </div>
+    <div class="card text-bg-danger mb-3" style="max-width: 20%;">
+      <div class="card-header">Header</div>
+      <div class="card-body">
+        <h5 class="card-title">Danger card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+    </div>
+    <div class="card text-bg-warning mb-3" style="max-width: 20%;">
+      <div class="card-header">Header</div>
+      <div class="card-body">
+        <h5 class="card-title">Warning card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+    </div>
+    <div class="card text-bg-dark mb-3" style="max-width: 20%;">
+      <div class="card-header">Header</div>
+      <div class="card-body">
+        <h5 class="card-title">Dark card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr>
 
   <!-- Footer -->
   <footer class="bg-dark text-white p-3 text-center mt-2">
@@ -374,11 +452,7 @@
     dersi 1.Proje/Tasarım ödevi olarak Koray Temizkan tarafından hazırlanmıştır.
   </footer>
 
-  <div class="marquee-container">
-    <div class="marquee">
-      <span>@copyright B231210010 Koray Temizkan.</span>
-    </div>
-  </div>
+  <hr>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
