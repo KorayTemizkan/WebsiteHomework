@@ -1,25 +1,17 @@
-.iletisim {
-    margin-left: 15px;
-    margin-top: 15px;
-    
-    text-align: center;
+body {
+    background-color:white;
 }
 
-.iletisim label {
-    font-size: 24px;
-    font-family: 'Times New Roman', Times, serif;
+.iletisim {
+    display: flex;
+    justify-content: center; /* Yatayda ortalamak için */
+    align-items: center;
+    text-align: center;
+
 }
 
 .iletisim input {
+    border: 1px solid blue;
     border-radius: 5px;
-    border-color: lightblue;
-}
-
-.iletisim textarea {
-    border-color: lightblue;
-}
-
-.iletisim legend{
-    font-size: 50px;
-    font-family: 'Times New Roman', Times, serif;
+    background-color: white;
 }

@@ -15,19 +15,24 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="Gorseller/K.png" alt="">
-        Kişisel Web Siteme Hoş Geldiniz !</a>
+
+      <a class="navbar-brand">
+        Kişisel Web Siteme Hoş Geldiniz ! Koyu Tema :</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onclick="myFunction()">
+      </div>
 
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="anaMenu.html">Ana sayfa</a>
           </li>
+
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Hakkımda
@@ -40,12 +45,12 @@
               <li><a class="dropdown-item" href="ozgecmis.html">Özgeçmişim</a></li>
             </ul>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" href="iletisim.html">İletişim</a>
           </li>
         </ul>
       </div>
-
     </div>
   </nav>
 
@@ -129,6 +134,11 @@
     </div>
   </div>
 
+  <marquee scrollamount ="10" direction="left">
+  <p>Koray</p>
+  <img src="Gorseller/ayasofya1.jpg" height="100px" width="100px">
+</marquee>
+  
   <!-- Footer -->
   <footer class="bg-dark text-white p-3 text-center mt-2">
     Sakarya Üniversitesi Bilgisayar ve Bilişim Bilimleri Fakültesi Bilgisayar Mühendisliği Bölümü - Web Teknolojileri
@@ -138,6 +148,18 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+
+    <script>
+      function myFunction() {
+        var element = document.body;
+        if (element.dataset.bsTheme === "light" || !element.dataset.bsTheme) {
+          element.dataset.bsTheme = "dark";
+        } else {
+          element.dataset.bsTheme = "light";
+        }
+      }
+    </script>
+    
 </body>
 
 </html>
