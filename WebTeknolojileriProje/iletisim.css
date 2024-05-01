@@ -1,17 +1,106 @@
 body {
-    background-color:white;
+    font-size: 16px;
+    font-family: system-ui;
+    /*background:-webkit-radial-gradient(top left, #ffffff,#000000);*/
+    background-image: url(Gorseller/ayasofya1.jpg);
+    background-size: cover;
 }
 
-.iletisim {
-    display: flex;
-    justify-content: center; /* Yatayda ortalamak için */
-    align-items: center;
+.form {
+    background: transparent;
+    width: 100%;
+}
+
+h2 {
     text-align: center;
-
+    color: white;
 }
 
-.iletisim input {
-    border: 1px solid blue;
+form {
+    width: 400px;
+    padding: 15px 40px 40px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: white;
+    
+    backdrop-filter: blur(20px);
+    margin: 4% auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+label i {
+    color: #999;
+    font-size: 80%;
+}
+
+input,
+select {
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 2px;
+    background-color: #a9bae64a;
+}
+
+.box {
+    padding-bottom: 10px;
+}
+
+.form-inline {
+    border: 1px solid #ccc;
+    padding: 8px 10px 4px;
+    border-radius: 2px;
+}
+
+.form-inline label,
+.form-inline input {
+    display: inline-block;
+    width: auto;
+    padding-right: 15px;
+}
+
+.error {
+    color: red;
+    font-size: 90%;
+}
+
+.altButon {
+    margin-top: 15px;
+    color: white;
+}
+
+label{
+    color: white;
+}
+
+.input-1 {
+    background-image: url(Gorseller/check.png);
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    border: 1px solid #01cc40;
+}
+
+.input-2 {
+    background-image: url(Gorseller/cancel.png);
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    border: 1px solid red;
+}
+
+.input-3 {
+    border: 1px solid #01cc40 !important;
+}
+
+select {
+    outline: none !important;
+}
+
+.input-4 {
+    border: 1px solid red;
 }
