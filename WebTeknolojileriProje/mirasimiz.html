@@ -15,11 +15,18 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Kişisel Web Siteme Hoş Geldiniz !</a>
+      
+      <a class="navbar-brand">
+        Kişisel Web Siteme Hoş Geldiniz ! Koyu Tema :</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onclick="myFunction()">
+      </div>
+      
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
@@ -195,41 +202,41 @@
     <div class="card text-bg-primary mb-3" style="max-width: 20%;">
       <div class="card-header">Header</div>
       <div class="card-body">
-        <h5 class="card-title">Primary card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-          content.</p>
+        <h5 class="card-title">Plan aşaması</h5>
+        <p class="card-text">Ayasofya çok katmanlı bir yapıdır . Yanındaki mezarlar dahil geniş bir alanı kapsar. İyi gez !</p>
       </div>
     </div>
+
     <div class="card text-bg-success mb-3" style="max-width: 20%;">
       <div class="card-header">Header</div>
       <div class="card-body">
-        <h5 class="card-title">Success card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-          content.</p>
+        <h5 class="card-title">Yiyecek ve İçecek</h5>
+        <p class="card-text">İçerisi aynı zamanda bir ibadethane de olduğu için açıkta yiyecek ve içecek taşıma , yeme ve içme !</p>
       </div>
     </div>
+
     <div class="card text-bg-danger mb-3" style="max-width: 20%;">
       <div class="card-header">Header</div>
       <div class="card-body">
-        <h5 class="card-title">Danger card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-          content.</p>
+        <h5 class="card-title">Dikkat et !</h5>
+        <p class="card-text">Etrafa dokunma , oturma ve yatma !</p>
       </div>
     </div>
+
     <div class="card text-bg-warning mb-3" style="max-width: 20%;">
       <div class="card-header">Header</div>
       <div class="card-body">
-        <h5 class="card-title">Warning card title</h5>
+        <h5 class="card-title">Turist ve Yerli tarifesi</h5>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
           content.</p>
       </div>
     </div>
+
     <div class="card text-bg-dark mb-3" style="max-width: 20%;">
       <div class="card-header">Header</div>
       <div class="card-body">
-        <h5 class="card-title">Dark card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-          content.</p>
+        <h5 class="card-title">Tarih !</h5>
+        <p class="card-text">Herhangi bir tarihi parçayı yeme ya da çalma ! </p>
       </div>
     </div>
   </div>
@@ -285,11 +292,23 @@
   <footer class="bg-dark text-white p-3 text-center mt-2">
     Sakarya Üniversitesi Bilgisayar ve Bilişim Bilimleri Fakültesi Bilgisayar Mühendisliği Bölümü - Web Teknolojileri
     dersi 1.Proje/Tasarım ödevi olarak Koray Temizkan tarafından hazırlanmıştır.
-  </footer>>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+
+    
+    <script>
+      function myFunction() {
+        var element = document.body;
+        if (element.dataset.bsTheme === "light" || !element.dataset.bsTheme) {
+          element.dataset.bsTheme = "dark";
+        } else {
+          element.dataset.bsTheme = "light";
+        }
+      }
+    </script>
 </body>
 
 </html>
