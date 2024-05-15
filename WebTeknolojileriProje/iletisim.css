@@ -65,11 +65,6 @@ select {
     padding-right: 15px;
 }
 
-.error {
-    color: red;
-    font-size: 90%;
-}
-
 .altButon {
     margin-top: 15px;
     color: white;
@@ -79,28 +74,7 @@ label{
     color: white;
 }
 
-.input-1 {
-    background-image: url(Gorseller/check.png);
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    border: 1px solid #01cc40;
-}
-
-.input-2 {
-    background-image: url(Gorseller/cancel.png);
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    border: 1px solid red;
-}
-
-.input-3 {
-    border: 1px solid #01cc40 !important;
-}
-
 select {
     outline: none !important;
 }
 
-.input-4 {
-    border: 1px solid red;
-}

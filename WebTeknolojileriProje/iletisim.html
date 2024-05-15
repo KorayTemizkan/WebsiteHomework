@@ -16,18 +16,15 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      
+
       <a class="navbar-brand">
-        Kişisel Web Siteme Hoş Geldiniz ! Koyu Tema :</a>
+        Kişisel Web Siteme Hoş Geldiniz !
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onclick="myFunction()">
-      </div>
-      
+
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
@@ -46,7 +43,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">İletişim</a>
+            <a class="nav-link" href="iletisim.html">İletişim</a>
           </li>
         </ul>
       </div>
@@ -56,41 +53,37 @@
   <!-- Form -->
 
 
-  <form name="Form" onsubmit="return validateForm()">
+  <form name="Form" action="iletisimFormu.php" method="post" onsubmit="return validateForm()">
     <h2>İletişim Formu</h2>
 
     <div class="box">
 
-      <label>Ad-Soyad : </label>
-      <input type="text" name="name" id="name">
-      <div class="error" id="nameErr"></div>
+      <label>Ad : </label>
+      <input type="text" name="fname" id="fname">
 
-      <label>Şifre : </label> <!--Yapılmadı-->
-      <input type="password" name="password" id="password">
-      <div class="error" id="passwordErr"></div>
+      <label>Soyad : </label>
+      <input type="text" name="lname" id="lname">
+
+      <label>Buluşma tarihi : </label>
+      <input type="date" name="date" id="date">
 
       <label>E-mail adresi : </label>
       <input type="text" name="email" id="email">
-      <div class="error" id="emailErr"></div>
 
       <label>Telefon numarası : </label>
-      <input type="text" name="mobile" maxlength="10" id="mobile">
-      <div class="error" id="mobileErr"></div>
+      <input type="text" name="phone" id="phone">
 
-      <label>Yaşınız : </label>
-      <input type="number" name="age" id="age">
-      <div class="error" id="ageErr"></div>
+      <label>Cinsiyet : </label>
+      <div class="form-inline" id="gender">
+        <label><input type="radio" name="gender" value="erkek"> Erkek</label>
+        <label><input type="radio" name="gender" value="kadın"> Kadın</label>
+      </div>
 
-      <label>En sevdiğiniz renk : </label>
-      <input type="color" name="color" id="color">
-      <div class="error" id="colorErr"></div>
-
-      <label>Doğum tarihiniz : </label>
-      <input type="date" name="birthdate" id="birthdate">
-      <div class="error" id="birthdateErr"></div>
+      <label>Adres:</label><br>
+      <textarea id="adress" name="adress" rows="4" cols="40"></textarea><br>
 
       <label>Öğrenim Durumu : </label>
-      <select name="country" id="country">
+      <select name="education" id="education">
         <option>Seçiniz</option>
         <option>İlkokul</option>
         <option>Ortaokul</option>
@@ -99,27 +92,19 @@
         <option>Yüksek Lisans</option>
         <option>Doktora</option>
         <option>Mezun</option>
-      </select>
-      <div class="error" id="countryErr"></div>
+      </select><hr>
+      
+      <label style="text-align: center;">Beni seviyor musun ? </label>
+      <input type="checkbox" name="hobby" id="hobby" style="text-align: left;"><hr>
 
-      <label>Cinsiyet : </label>
-      <div class="form-inline" id="gender">
-        <label><input type="radio" name="gender" value="male"> Erkek</label>
-        <label><input type="radio" name="gender" value="female"> Kadın</label>
-      </div>
-      <div class="error" id="genderErr"></div>
+      <label>Yaşınız : </label>
+      <input type="number" name="age" id="age">
 
-      <label>Abone misin ? </label>
-      <input type="checkbox" name="subscribe" id="subscribe">
-      <div class="error" id="subscribeErr"></div>
+      <label>En sevdiğiniz renk : </label>
+      <input type="color" name="color" id="color">
 
       <label>Fotoğrafınız : </label>
       <input type="file" name="photo" id="photo">
-      <div class="error" id="photoErr"></div>
-
-      <label>Yorum:</label><br>
-      <textarea id="comment" name="comment" id="comment" rows="4" cols="40"></textarea><br>
-      <div class="error" id="textareaErr"></div>
 
       <input class="altButon" type="reset" value="Temizle">
       <input class="altButon" type="submit" value="Gönder">
@@ -136,18 +121,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-
-    
-    <script>
-      function myFunction() {
-        var element = document.body;
-        if (element.dataset.bsTheme === "light" || !element.dataset.bsTheme) {
-          element.dataset.bsTheme = "dark";
-        } else {
-          element.dataset.bsTheme = "light";
-        }
-      }
-    </script>
 </body>
 
 </html>
