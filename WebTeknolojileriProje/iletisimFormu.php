@@ -16,17 +16,13 @@ echo "Adresiniz : " . $_POST['adress'] . "<br>";
 
 echo "Eğitim durumun : " . $_POST['education'] . "<br>";
 
-echo "En sevdiğiniz sayı : " . $_POST['age'] . "<br>";
+echo "Yaşınız : " . $_POST['age'] . "<br>";
 
-echo "Beni seviyor musun ? : ";
-if($_POST['hobby'] == 'on')
-{
-    echo "Evet" . "<br>";
-}
-
-else
-{
-    echo "Hayır" . "<br>";
+echo "Beni seviyor musun ? : " . "<br>";
+if(isset($_POST['hobby'])) {
+    if($_POST['hobby'] == 'on') {
+        echo "Evet" . "<br>";
+    }
 }
 
 echo "Ena sevdiğiniz renk : " . $_POST['color'] . "<br>";

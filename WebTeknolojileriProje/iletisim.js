@@ -1,31 +1,49 @@
 function validateForm() {
-    var firstName = document.forms["Form"]["fname"].value;
-    var lastName = document.forms["Form"]["lname"].value;
-    var date = document.forms["Form"]["date"].value;
-    var email = document.forms["Form"]["email"].value;
-    var gender = document.forms["Form"]["gender"].value;
-    var adress = document.forms["Form"]["adress"].value;
-    var education = document.forms["Form"]["education"].value;
-    var phone = document.forms["Form"]["phone"].value;
-    var age = parseInt(document.forms["Form"]["age"].value);
-    var color = document.forms["Form"]["color"].value;
-    var file = document.forms["Form"]["color"].value;
+    var form = document.forms["Form"];
+    var firstName = form["fname"].value.trim();
+    var lastName = form["lname"].value.trim();
+    var date = form["date"].value.trim();
+    var email = form["email"].value.trim();
+    var gender = form["gender"].value.trim();
+    var address = form["adress"].value.trim();
+    var education = form["education"].value.trim();
+    var phone = form["phone"].value.trim();
+    var age = form["age"].value;
+    var color = form["color"].value.trim();
+    var photo = form["photo"].value.trim();
 
-    if (firstName == "" || lastName == "" || date == "" || email == "" || phone == "" || gender == "" || adress == "" || education == "Seçiniz" || age == "" || color == "" || file == "") {
-        window.alert('Lütfen eksik yer bırakmayınız !');
+    if (firstName === "" || lastName === "" || date === "" || email === "" || phone === "" || gender === "" || address === "" || education === "Seçiniz" || age === "" || color === "" || photo === "") {
+        window.alert('Lütfen eksik yer bırakmayınız!');
         return false;
     }
 
-    if (!isNaN(firstName) || !isNaN(lastName)) {
+    var nameDuzen = /^[a-zA-ZğüşöçİĞÜŞÖÇ]+$/;
+    if (!nameDuzen.test(firstName) || !nameDuzen.test(lastName)) {
         window.alert('Ad-Soyad alanında yalnızca harf olmalıdır');
         return false;
     }
 
-    var at = email.indexOf("@");
-    var dot = email.lastIndexOf(".");
-
-    if (at < 1 || dot < at + 2 || dot2 >= email.length) {
+    var emailDuzen = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailDuzen.test(email)) {
         window.alert("Geçersiz e-mail");
+        return false;
+    }
+    
+    var phoneDuzen = /^(\+?90|0)?\s*5\d{2}\s*\d{3}\s*\d{2}\s*\d{2}$/;
+    if (!phoneDuzen.test(phone)) {
+        window.alert("Geçersiz telefon numarası");
+        return false;
+    }
+
+    if (isNaN(age) || age < 10 || age > 100) {
+        window.alert("Geçersiz yaş");
+        return false;
+    }
+
+    var simdikiTarih = new Date();
+    var secilenTarih = new Date(date);
+    if (secilenTarih < simdikiTarih) {
+        window.alert("Yalnızca gelecek tarih secilebilir");
         return false;
     }
 }
