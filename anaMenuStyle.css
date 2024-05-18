@@ -1,0 +1,62 @@
+.ayasofyaBilgiler .baslik {
+    text-align: center;
+}
+
+.ayasofyaBilgiler .baslik .baslikYazisi {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 72px;
+}
+
+.ayasofyaBilgiler .bilgiler {
+    margin-left: 15px;
+}
+
+table {
+    width: 99%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+table tr,
+table td,
+table th {
+    border: 1px solid #bbb;
+    padding: 10px 20px;
+}
+
+table th {
+    background-color: #d1084b;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Özgeçmiş dosyası */
+
+.ozgecmisBaslik , .ozgecmisAna{
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.ozgecmisBaslik .kendiFotom {
+    float: right;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+
+.ozgecmisBaslik .korayYazisi {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 72px;
+}
+
+/* Korosel */
+
+.carousel {
+    max-width: 800px;
+    max-height: 400px;
+    margin: 0 auto; 
+  }
+
+  .carousel-item img {
+    max-height: 400px; 
+    object-fit: cover; 
+  }

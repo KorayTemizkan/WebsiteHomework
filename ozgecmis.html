@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ana Menu</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="anaMenuStyle.css">
+</head>
+
+<body>
+  <!-- NAVBAR -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      
+      <a class="navbar-brand">
+        Kişisel Web Siteme Hoş Geldiniz ! Koyu Tema :</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onclick="myFunction()">
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="anaMenu.html">Ana sayfa</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Hakkımda
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="motorum.html">Motorum</a></li>
+              <li><a class="dropdown-item" href="sehrim.html">Şehrim</a></li>
+              <li><a class="dropdown-item" href="mirasimiz.html">Mirasımız</a></li>
+              <li><a class="dropdown-item" href="ilgiAlanlarim.html">İlgi Alanlarım</a></li>
+              <li><a class="dropdown-item" href="ozgecmis.html">Özgeçmişim</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="iletisim.html">İletişim</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Semantic tags -->
+
+
+
+  <header class="ozgecmisBaslik">
+    <figure class="kendiFotom">
+      <img src="AnaSayfaGorseller/9.jpg" alt="Ayasofya" width="250px" height="240px">
+    </figure>
+
+    <h1 class="korayYazisi">Koray Temizkan</h1><br>
+
+    <h5>Mevcut Durum:</h5>
+    <p>Sakarya Üniversitesi Bilgisayar ve Bilişim Bilimleri Fakültesi Bilgisayar Mühendisliği Bölümü 1.Sınıf Öğrencisi
+    </p>
+
+    <h5>Telefon Numarası :</h5>
+    <p>+90 534 393 6207</p>
+
+    <h5>Mail Adresi :</h5>
+    <p>temizkankoray1923@gmail.com</p>
+
+    <h5>Adres :</h5>
+    <p>İstanbul</p>
+  </header>
+
+  <hr>
+
+  <main class="ozgecmisAna">
+    <section>
+      <h1>Eğitim</h1><br>
+
+      <p>Söğütlüçeşme İlkokulu</p>
+      <p>Şair Fevzi Kutlu Kalkancı Ortaokulu</p>
+      <p>Vali Muammer Güler Sosyal Bilimler Lisesi</p>
+      <p>Sakarya Üniversitesi</p>
+
+    </section>
+
+    <hr>
+
+    <section>
+      <h1>İş Tecrübeleri</h1><br>
+
+      <h5>Şok Marketler</h5>
+      <p>3 ay mağaza yarı zamanlı satış temsilcisi - 2 ay mağaza yönetici yardımcısı - 1 ay mağaza yöneticisi</p>
+
+    </section>
+
+    <hr>
+
+    <section>
+      <h1>Hakkımda</h1><br>
+      <p>Doğma büyüme İstanbulluyum . Aslen Kırıkkaleliyim . İlkokulu İstanbul Küçükçekmece Söğütlüçeşme İlkokulu'nda
+        okudum . Babamın işi dolayısıyla Esenyurt'a taşındık . Şair Fevzi Kutlu Kalkancı Ortaokulu'nu bitirdikten sonra
+        Sosyal Bilimler Lisesi'nde okudum . 1 yıl İngilizce+Almanca hazırlık , 10.sınıfta Osmanlıca gibi dersler görmeme
+        rağmen 12.sınıfta okul değiştirerek sayısal alana geçtim . 1 yıl daha deneyerek Sakarya Üniversitesi'ne geldim.
+      </p>
+    </section>
+
+    <hr>
+
+    <section>
+      <h1>Kurslar , Sertifikalar ve Başarılar</h1><br>
+      <p>2024 SAÜ-OTG-GameJam-V1 Birinciliği</p>
+    </section>
+
+    <hr>
+
+    <section>
+      <h1>Beceriler</h1>
+      <P>Unity , C++ , C# , HTML , CSS, BootStrap</P>
+    </section>
+  </main>
+
+  <hr>
+
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white p-3 text-center mt-2">
+    Sakarya Üniversitesi Bilgisayar ve Bilişim Bilimleri Fakültesi Bilgisayar Mühendisliği Bölümü - Web Teknolojileri
+    dersi 1.Proje/Tasarım ödevi olarak Koray Temizkan tarafından hazırlanmıştır.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    
+    <script>
+      function myFunction() {
+        var element = document.body;
+        if (element.dataset.bsTheme === "light" || !element.dataset.bsTheme) {
+          element.dataset.bsTheme = "dark";
+        } else {
+          element.dataset.bsTheme = "light";
+        }
+      }
+    </script>
+    
+</body>
+
+</html>
