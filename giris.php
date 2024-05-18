@@ -1,7 +1,7 @@
 <?php
 
-$mailGirdisi = $_GET['mailAdresi'];
-$sifreGirdisi = $_GET['sifre'];
+$mailGirdisi = $_POST['mailAdresi'];
+$sifreGirdisi = $_POST['sifre'];
 
 $message = "Hoş geldiniz ". $mailGirdisi;
 
