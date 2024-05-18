@@ -12,7 +12,7 @@ echo "Telefon numaranız : " . $_POST['phone'] . "<br>";
 
 echo "Cinsiyetiniz : " . $_POST['gender'] . "<br>";
 
-echo "Adresiniz : " . $_POST['adress'] . "<br>";
+echo "Adresiniz : " . $_POST['address'] . "<br>";
 
 echo "Eğitim durumun : " . $_POST['education'] . "<br>";
 

@@ -52,65 +52,141 @@
 
   <!-- Form -->
 
+  <div id="app">
+    <form name="Form" action="iletisimFormu.php" method="post" onsubmit="return validateForm()">
+      <h2>İletişim Formu</h2>
 
-  <form name="Form" action="iletisimFormu.php" method="post" onsubmit="return validateForm()">
-    <h2>İletişim Formu</h2>
+      <div class="box">
 
-    <div class="box">
+        <label>Ad : </label>
+        <input type="text" name="fname" id="fname">
 
-      <label>Ad : </label>
-      <input type="text" name="fname" id="fname">
+        <label>Soyad : </label>
+        <input type="text" name="lname" id="lname">
 
-      <label>Soyad : </label>
-      <input type="text" name="lname" id="lname">
+        <label>Buluşma tarihi : </label>
+        <input type="date" name="date" id="date">
 
-      <label>Buluşma tarihi : </label>
-      <input type="date" name="date" id="date">
+        <label>E-mail adresi : </label>
+        <input type="text" name="email" id="email">
 
-      <label>E-mail adresi : </label>
-      <input type="text" name="email" id="email">
+        <label>Telefon numarası : </label>
+        <input type="tel" name="phone" id="phone">
 
-      <label>Telefon numarası : </label>
-      <input type="tel" name="phone" id="phone">
+        <label>Cinsiyet : </label>
+        <div class="form-inline" id="gender">
+          <label><input type="radio" name="gender" value="erkek" checked> Erkek</label>
+          <label><input type="radio" name="gender" value="kadın"> Kadın</label>
+        </div>
 
-      <label>Cinsiyet : </label>
-      <div class="form-inline" id="gender">
-        <label><input type="radio" name="gender" value="erkek"> Erkek</label>
-        <label><input type="radio" name="gender" value="kadın"> Kadın</label>
+        <label>Adres:</label><br>
+        <textarea id="address" name="address" rows="4" cols="40"></textarea><br>
+
+        <label>Öğrenim Durumu : </label>
+        <select name="education" id="education">
+          <option>Seçiniz</option>
+          <option>İlkokul</option>
+          <option>Ortaokul</option>
+          <option>Lise</option>
+          <option>Lisans</option>
+          <option>Yüksek Lisans</option>
+          <option>Doktora</option>
+          <option>Mezun</option>
+        </select>
+        <hr>
+
+        <label style="text-align: center;">Beni seviyor musun ? </label>
+        <input type="checkbox" name="hobby" id="hobby" style="text-align: left;">
+        <hr>
+
+        <label>Yaşınız : </label>
+        <input type="number" name="age" id="age">
+
+        <label>En sevdiğiniz renk : </label>
+        <input type="color" name="color" id="color">
+
+        <label>Fotoğrafınız : </label>
+        <input type="file" name="photo" id="photo">
+
+        <input class="altButon" type="reset" value="Temizle">
+        <input class="altButon" type="submit" value="Gönder JS" id="submitJS">
+        <input class="altButon" type="submit" value="Gönder VUE" id="submitVue" @click="validateFormVue">
+
       </div>
+    </form>
+  </div>
 
-      <label>Adres:</label><br>
-      <textarea id="adress" name="adress" rows="4" cols="40"></textarea><br>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        formData: {
+          fname: null,
+          lname: null,
+          date: null,
+          email: null,
+          phone: null,
+          gender: 'erkek',
+          address: null,
+          education: null,
+          hobby: false,
+          age: null,
+          color: null,
+          photo: null,
+        }
+      },
+      methods: {
+        validateFormVue(event) {
+          const formData = this.formData;
+          const firstName = formData.fname;
+          const lastName = formData.lname;
+          const email = formData.email;
+          const phone = formData.phone;
+          const age = formData.age;
+          const date = formData.date;
 
-      <label>Öğrenim Durumu : </label>
-      <select name="education" id="education">
-        <option>Seçiniz</option>
-        <option>İlkokul</option>
-        <option>Ortaokul</option>
-        <option>Lise</option>
-        <option>Lisans</option>
-        <option>Yüksek Lisans</option>
-        <option>Doktora</option>
-        <option>Mezun</option>
-      </select><hr>
-      
-      <label style="text-align: center;">Beni seviyor musun ? </label>
-      <input type="checkbox" name="hobby" id="hobby" style="text-align: left;"><hr>
+          if (formData.fname === "" || formData.lname === "" || formData.date === "" || formData.email === "" || formData.phone === "" || formData.address === "" || formData.education === "Seçiniz" || formData.age === "" || formData.color === "" || formData.photo === null) {
+            window.alert('Lütfen eksik yer bırakmayınız!');
+            return false;
+          }
 
-      <label>Yaşınız : </label>
-      <input type="number" name="age" id="age">
+          const nameDuzen = /^[a-zA-ZğüşöçİĞÜŞÖÇ]+$/;
+          if (!nameDuzen.test(firstName) || !nameDuzen.test(lastName)) {
+            window.alert('Ad-Soyad alanında yalnızca harf olmalıdır');
+            return false;
+          }
 
-      <label>En sevdiğiniz renk : </label>
-      <input type="color" name="color" id="color">
+          const emailDuzen = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailDuzen.test(email)) {
+            window.alert("Geçersiz e-mail");
+            return false;
+          }
 
-      <label>Fotoğrafınız : </label>
-      <input type="file" name="photo" id="photo">
+          const phoneDuzen = /^(\+?90|0)?\s*5\d{2}\s*\d{3}\s*\d{2}\s*\d{2}$/;
+          if (!phoneDuzen.test(phone)) {
+            window.alert("Geçersiz telefon numarası");
+            return false;
+          }
 
-      <input class="altButon" type="reset" value="Temizle">
-      <input class="altButon" type="submit" value="Gönder">
-    </div>
+          if (isNaN(age) || age < 10 || age > 100) {
+            window.alert("Geçersiz yaş");
+            return false;
+          }
 
-  </form>
+          const simdikiTarih = new Date();
+          const secilenTarih = new Date(date);
+          if (secilenTarih < simdikiTarih) {
+            window.alert("Yalnızca gelecek tarih secilebilir");
+            return false;
+          }
+          return true;
+        }
+
+      }
+    });
+
+  </script>
 
   <!-- Footer -->
   <footer class="bg-dark text-white p-3 text-center mt-2">

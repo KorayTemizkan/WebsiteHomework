@@ -50,5 +50,13 @@ table th {
 
 /* Korosel */
 
+.carousel {
+    max-width: 800px; /* Carousel genişliği */
+    max-height: 400px; /* Carousel yüksekliği */
+    margin: 0 auto; /* Carousel'i ortalamak için */
+  }
 
-  
+  .carousel-item img {
+    max-height: 400px; /* Carousel içindeki resimlerin yüksekliği */
+    object-fit: cover; /* Resimleri kapsayacak şekilde kırp */
+  }
